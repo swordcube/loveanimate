@@ -1,8 +1,13 @@
 local la = { _VERSION = "0.1.0" }
 print("Loaded LoveAnimate v" .. la._VERSION)
 
-local AnimateAtlas = require("loveanimate.AnimateAtlas")
-local SparrowAtlas = require("loveanimate.SparrowAtlas")
+local libPath = ...
+if libPath and #libPath ~= 0 and libPath ~= "." then
+    libPath = libPath .. "."
+end
+
+local AnimateAtlas = require(libPath .. "AnimateAtlas")
+local SparrowAtlas = require(libPath .. "SparrowAtlas")
 
 ---
 --- @deprecated

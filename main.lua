@@ -20,7 +20,7 @@ function love.load()
 	if(arg[2] ~= nil) then
 		men:load("examples/"..tostring(arg[2]))
 	else
-		men:load("examples/DARNELL_CUTSCENE3")
+		men:load("examples/lyric")
 	end
 	men:play()
 
